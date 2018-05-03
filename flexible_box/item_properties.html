@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>item-properties</title>
+    <link rel="stylesheet" href="./basic.css">
+    <style>
+        .box {
+            background-color: #934792;
+        }
+        .item {
+            background-color: #FB7704;
+            /* 基础宽度 */
+            width: 50px;
+            height: 40px ;
+            line-height: 40px;
+            border: none;
+            margin-left: 10px;
+        }
+
+        .container-order .item-2 {
+            width: 75px;
+        }
+        .container-order .item-4{
+            width: 100px;
+        }
+        .container-order .item-5 {
+            width: 125px;
+        }
+        .container-order .box-1 .item-2 {
+            order: 1;
+        }
+        .container-order .box-1 .item-3 {
+            order: 2;
+        }
+        .container-order .box-2 .item-5 {
+            order: -1;
+        }
+        .container-order .box-2 .item-4 {
+            order: -2;
+        }
+          .container-order .box-3 {
+            flex-direction: column;
+            display: inline-flex;
+            padding-top: 0px;
+          }
+
+          .container-order .box-3 .item {
+              width: 100px;
+              margin-left: 0px;
+              margin-top: 10px;
+          }
+          .container-order .box-3 .item-1 {
+              order: 1;
+          }
+          .container-order .box-3 .item-2 {
+              order: -1;
+          }
+
+
+          .container-grow {}
+          .container-grow .box-1 .item {
+              flex-grow: 1;
+          }
+          .container-grow .box-2 .item-1, 
+          .container-grow .box-2 .item-3 {
+              flex-grow: 1;
+          }
+          .container-grow .box-2 .item-2 {
+              flex-grow: 2;
+          }
+
+          .container-shrink {}
+           .container-shrink .box .item {
+               width: 100px;
+           }
+          .container-shrink .box .item-2 {
+              flex-shrink: 0;
+          }
+
+          .container-basis {}
+          .container-basis .box .item-1 {
+              flex-basis: 200px;
+          }
+          .container-basis .box .item-2 {
+              flex-basis: 500px;
+          }
+          .container-basis .box .item-3 {
+              flex-basis: 0;
+          }
+          .container-self {}
+          .container-self .item-2 {
+              height: 150px;
+          }
+          .container-self .item-3 {
+              height: 75px;
+              align-self: flex-end;
+          }
+          .container-self .item-4 {
+              height: 75px;
+              align-self: center;
+          }
+    </style>
+</head>
+<body>
+    <header style="display: flex;justify-content: center;">
+        <ul>
+            <li><a href="#order">1. order</a></li>
+            <li><a href="#flex_grow">2.1). flex-grow</a></li>
+            <li><a href="#flex_shrink">2.2). flex-shrink</a></li>
+            <li><a href="#flex_basis">2.3). flex-basis</a></li>
+            <li><a href="#flex">2. flex</a></li>
+            <li><a href="#align_self">3. align-self</a></li>
+        </ul>
+    </header>
+    <section class="container-order">
+        <header>
+            <h2 id="order">order</h2>
+        </header>
+        <div class="box box-1">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+        </div>
+        <div class="box box-2">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+        </div>
+        <div class="box box-3">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+        </div>
+    </section>
+    <section class="container-grow">
+        <header>
+            <h2 id="flex_grow">flex-grow</h2>
+        </header>
+        <div class="box box-1">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+        </div>
+        <div class="box box-2">
+           <div class="item item-1"> 1 </div>
+           <div class="item item-2"> 2 </div>
+           <div class="item item-3"> 1 </div>
+        </div>
+    </section>
+    <section class="container-shrink">
+        <header>
+            <h2 id="flex_shrink">flex-shrink</h2>
+        </header>
+        <div class="box">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+    </section>
+    
+    <section class="container-basis">
+        <header>
+            <h2 id="flex_basis">flex-basis</h2>
+        </header>
+        <div class="box box-1">
+            <span class="item item-1"> 1 </span>
+            <span class="item item-2"> 2 </span>
+            <span class="item item-3"> 3 </span>
+        </div>
+    </section>
+    <section>
+        <header>
+            <h2 id="flex">flex</h2>
+            flex 属性是 flex-grow, flex-shrink, flex-basis 的简写
+        </header>
+    </section>
+    <section class="container-self">
+        <header>
+            <h2 id="align_self">align-self</h2>
+        </header>
+        <div class="box">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+        </div> 
+    </section>
+</body>
+</html>

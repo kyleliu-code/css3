@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-properties</title>
+    <link rel="stylesheet" href="./basic.css">
+    <style>
+        .container-direction .box-1 {
+            flex-direction: row;
+        }
+
+        .container-direction .box-2 {
+            flex-direction: row-reverse;
+        }
+
+        .container-direction .box-3 {
+            flex-direction: column;
+        }
+
+        .container-direction .box-4 {
+            flex-direction: column-reverse;
+        }
+
+        .container-wrap .box-1 {
+            flex-wrap: nowrap;
+        }
+
+        .container-wrap .box-2 {
+            flex-wrap: wrap;
+        }
+
+        .container-wrap .box-3 {
+            flex-wrap: wrap-reverse;
+        }
+
+
+
+        .container-justify .item-1 {
+            width: 50px;
+        }
+
+        .container-justify .item-2 {
+            width: 100px;
+        }
+
+        .container-justify .item-3 {
+            width: 150px;
+        }
+
+        .container-justify .box-1 {
+            justify-content: flex-start;
+        }
+
+        .container-justify .box-2 {
+            justify-content: flex-end;
+        }
+
+        .container-justify .box-3 {
+            justify-content: center;
+        }
+
+        .container-justify .box-4 {
+            justify-content: space-between;
+        }
+
+        .container-justify .box-5 {
+            justify-content: space-around;
+        }
+
+        .container-align .item-1 {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .container-align .item-2 {
+            height: 100px;
+        }
+
+        .container-align .item-3 {
+            height: 150px;
+        }
+
+        .container-align .item-4 {
+            height: 200px;
+        }
+
+        .container-align .box-1 {
+            align-items: flex-start;
+        }
+
+        .container-align .box-2 {
+            align-items: flex-end;
+        }
+
+        .container-align .box-3 {
+            align-items: center;
+        }
+
+        .container-align .box-4 {
+            align-items: baseline;
+        }
+
+        .container-align .box-5 .item {
+            height: auto;
+        }
+
+        .container-align .box-5 {
+            height: 300px;
+            align-items: stretch;
+        }
+
+        .container-align-content .box {
+            flex-wrap: wrap;
+        }
+
+        .container-align-content .item {
+            width: 150px;
+        }
+
+        .container-align-content .item-1 {
+            width: 50px;
+        }
+
+        .container-align-content .item-2 {
+            width: 25px;
+        }
+
+        .container-align-content .item-3 {
+            width: 75px;
+        }
+
+        .container-align-content .item-4 {
+            width: 100px;
+        }
+
+        .container-align-content .item-5 {
+            width: 150px;
+        }
+
+        .container-align-content .box {
+            height: 400px;
+        }
+ .container-align-content .box-1 {
+     align-content: flex-start;
+ }
+ .container-align-content .box-2 {
+     align-content: flex-end;
+ }
+ .container-align-content .box-3 {
+     align-content: center;
+ }
+ .container-align-content .box-4 {
+     align-content: space-between;
+ }
+ .container-align-content .box-5 {
+     align-content: space-around;
+ }
+ .container-align-content .box-6 {
+ align-content: stretch;
+ }
+ 
+ .container-align-content .box-6 .item {
+     height: auto;
+ }
+    </style>
+</head>
+
+<body>
+    <header style="display: flex; justify-content: center;">
+        <ul>
+            <li><a href="#flex_direction">flex-direction</a></li>
+            <li><a href="#flex_wrap">flex-wrap</a></li>
+            <li><a href="#flex_flow">flex-flow</a></li>
+            <li><a href="#justify_content">justify-content</a></li>
+            <li><a href="#align_items">align-items</a></li>
+            <li><a href="#align_content">align-content</a></li>
+        </ul>
+    </header>
+    <section class="container-direction">
+        <header>
+            <h2 id="flex_direction">flex-direction</h2>
+        </header>
+        <main>
+            <div class="box box-1">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+            </div>
+
+            <div class="box box-2">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+            </div>
+            <div class="box box-3">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+            </div>
+            <div class="box box-4">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+            </div>
+        </main>
+
+    </section>
+
+    <section class="container-wrap">
+        <header>
+            <h2 id="flex_wrap">flex-wrap</h2>
+        </header>
+        <main>
+            <div class="box box-1">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+                <div class="item item-4"> 4 </div>
+                <div class="item item-5"> 5 </div>
+                <div class="item item-6"> 6 </div>
+                <div class="item item-7"> 7 </div>
+                <div class="item item-8"> 8 </div>
+                <div class="item item-9"> 9 </div>
+                <div class="item item-10"> 10 </div>
+                <div class="item item-11"> 11 </div>
+                <div class="item item-12"> 12 </div>
+            </div>
+            <div class="box box-2">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+                <div class="item item-4"> 4 </div>
+                <div class="item item-5"> 5 </div>
+                <div class="item item-6"> 6 </div>
+                <div class="item item-7"> 7 </div>
+                <div class="item item-8"> 8 </div>
+                <div class="item item-9"> 9 </div>
+                <div class="item item-10"> 10 </div>
+                <div class="item item-11"> 11 </div>
+                <div class="item item-12"> 12 </div>
+            </div>
+            <div class="box box-3">
+                <div class="item item-1"> 1 </div>
+                <div class="item item-2"> 2 </div>
+                <div class="item item-3"> 3 </div>
+                <div class="item item-4"> 4 </div>
+                <div class="item item-5"> 5 </div>
+                <div class="item item-6"> 6 </div>
+                <div class="item item-7"> 7 </div>
+                <div class="item item-8"> 8 </div>
+                <div class="item item-9"> 9 </div>
+                <div class="item item-10"> 10 </div>
+                <div class="item item-11"> 11 </div>
+                <div class="item item-12"> 12 </div>
+            </div>
+        </main>
+    </section>
+    <section>
+        <header>
+            <h2 id="flex_flow">flex-flow</h2>
+        </header>
+        <div>
+            flex-grow 是 flex-direction 和 flex-wrap 的简写
+        </div>
+    </section>
+    <section class="container-justify">
+        <header>
+            <h2 id="justify_content">justify-content</h2>
+        </header>
+        <div class="box box-1">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+        </div>
+        <div class="box box-2">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+        </div>
+        <div class="box box-3">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+        </div>
+        <div class="box box-4">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+        </div>
+        <div class="box box-5">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+        </div>
+    </section>
+
+    <section class="container-align">
+        <header>
+            <h2 id="align_items">align-items</h2>
+        </header>
+        <div class="box box-1">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+        </div>
+        <div class="box box-2">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+        </div>
+        <div class="box box-3">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+        </div>
+        <div class="box box-4">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+        </div>
+        <div class="box box-5">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+        </div>
+    </section>
+    <section class="container-align-content">
+        <header>
+            <h2 id="align-content">align-content</h2>
+        </header>
+        <div class="box box-1">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+        <div class="box box-2">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+        <div class="box box-3">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+        <div class="box box-4">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+        <div class="box box-5">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+        <div class="box box-6">
+            <div class="item item-1"> 1 </div>
+            <div class="item item-2"> 2 </div>
+            <div class="item item-3"> 3 </div>
+            <div class="item item-4"> 4 </div>
+            <div class="item item-5"> 5 </div>
+            <div class="item item-6"> 6 </div>
+            <div class="item item-7"> 7 </div>
+            <div class="item item-8"> 8 </div>
+            <div class="item item-9"> 9 </div>
+            <div class="item item-10"> 10 </div>
+            <div class="item item-11"> 11 </div>
+            <div class="item item-12"> 12 </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
